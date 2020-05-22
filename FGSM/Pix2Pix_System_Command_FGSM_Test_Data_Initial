@@ -1,0 +1,17 @@
+# Generating the Pix2Pix version of the testing fooling data
+
+*)
+
+1. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_1  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+2. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_10  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+3. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_20  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+4. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_30  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+5. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_40  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+6. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_50  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out
+
+7. /home/shayan/CIFAR/tensorflow-adversarial-master/example/adver_work/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Testing_Data/Epoch_60  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/FGSM/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/FGSM/Combined_Out

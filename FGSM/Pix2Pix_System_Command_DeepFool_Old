@@ -1,0 +1,41 @@
+# Resizing the training images! --> Fooling Data
+
+1) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Data   --operation resize   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Data_Resized
+
+# Resizing the training images! --> Fooling Clean Data
+
+2) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Clean_Data   --operation resize   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Clean_Data_Resized
+
+# Resizing the testing images! --> Fooling Data
+
+3) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Data   --operation resize   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Data_Resized
+
+# Resizing the testing images! --> Fooling Clean Data
+
+4) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Clean_Data   --operation resize   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Clean_Data_Resized
+
+# Combining the resized training images!
+
+5) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Clean_Data_Resized   --b_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Fooling_Data_Resized   --operation combine   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Data
+
+# Combining the resized testing images!
+
+6) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/tools/process.py   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Clean_Data_Resized   --b_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Fooling_Data_Resized   --operation combine   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data
+
+# Training the neural network on the combined resized images!
+
+7) /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode train   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out   --max_epochs 5   --input_dir /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Data   --which_direction AtoB
+
+# Generating the Pix2Pix version of the testing fooling data
+
+8)
+
+A. /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Testing_Out/Epoch_1  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out
+
+B. /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Testing_Out/Epoch_2  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out
+
+C. /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Testing_Out/Epoch_3  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out
+
+D. /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Testing_Out/Epoch_4  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out
+
+E. /home/shayan/PycharmProjects/DenseNet-Keras/densenet_TestNew/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py   --mode test   --output_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Testing_Out/Epoch_5  --input_dir /home/shayan/Proposal_Pix2Pix/Data/Testing/DeepFool/Combined_Data   --checkpoint /home/shayan/Proposal_Pix2Pix/Data/Training/DeepFool/Combined_Out

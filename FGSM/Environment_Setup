@@ -1,0 +1,8 @@
+/home/shayan/Proposal_Pix2Pix/pix2pix_gan/bin/python tools/download-dataset.py facades
+
+/home/shayan/Proposal_Pix2Pix/pix2pix_gan/bin/python /home/shayan/Proposal_Pix2Pix/pix2pix.py \
+  --mode train \
+  --output_dir facades_train \
+  --max_epochs 1 \
+  --input_dir facades/train \
+  --which_direction BtoA
